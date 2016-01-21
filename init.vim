@@ -14,6 +14,7 @@ Plug 'Shougo/vimproc'
 Plug 'eagletmt/neco-ghc'
 Plug 'itchyny/vim-haskell-indent'
 Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 filetype on

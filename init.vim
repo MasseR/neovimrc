@@ -13,6 +13,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'Shougo/vimproc'
 Plug 'Shougo/neocomplete'
 Plug 'eagletmt/neco-ghc'
+Plug 'itchyny/vim-haskell-indent'
 call plug#end()
 
 filetype on

@@ -11,7 +11,6 @@ Plug 'eagletmt/ghcmod-vim'
 Plug 'scrooloose/syntastic'
 Plug 'tomtom/tcomment_vim'
 Plug 'Shougo/vimproc'
-Plug 'Shougo/neocomplete'
 Plug 'eagletmt/neco-ghc'
 Plug 'itchyny/vim-haskell-indent'
 call plug#end()
@@ -26,11 +25,6 @@ let mapleader = " "
 let maplocalleader = " "
 
 set mouse="a"
-
-" Automatically open popup
-autocmd CursorMovedI *.* if pumvisible() == 0|pclose|endif
-autocmd InsertLeave *.* if pumvisible() == 0|pclose|endif
-set completeopt=menuone,menu,longest
 
 " Show tabs
 set list listchars=tab:»·,nbsp:␣,trail:·

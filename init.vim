@@ -11,6 +11,8 @@ Plug 'eagletmt/ghcmod-vim'
 Plug 'scrooloose/syntastic'
 Plug 'tomtom/tcomment_vim'
 Plug 'Shougo/vimproc'
+Plug 'Shougo/neocomplete'
+Plug 'eagletmt/neco-ghc'
 call plug#end()
 
 filetype on
@@ -65,3 +67,7 @@ if !exists("ghcmod_signs_loaded")
     let ghcmod_signs_loaded = 1
     autocmd BufwritePost *.hs if exists(":GhcModCheck")|call Ghcmod_check_and_sign()|endif
 endif
+
+" Setup haskell autocompletion
+let g:haskellmode_completion_ghc = 0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc

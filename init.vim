@@ -13,6 +13,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'Shougo/vimproc'
 Plug 'eagletmt/neco-ghc'
 Plug 'itchyny/vim-haskell-indent'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 filetype on
@@ -29,6 +30,7 @@ set mouse="a"
 " Show tabs
 set list listchars=tab:»·,nbsp:␣,trail:·
 
+set completeopt=longest,menuone
 
 set textwidth=0
 set expandtab
@@ -66,3 +68,4 @@ endif
 " Setup haskell autocompletion
 let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+let g:ycm_semantic_triggers = {'haskell': ['.']}
